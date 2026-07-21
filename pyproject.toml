@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perp-tracker"
+version = "0.2.1"
+description = "Track funding rates across perps exchanges and simulate basis carry"
+readme = "README.md"
+authors = [{ name = "Alex", email = "alex@local" }]
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.25.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+]
+
+[project.scripts]
+perp-tracker = "perp_tracker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["perp_tracker*"]
