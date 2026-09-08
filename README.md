@@ -51,3 +51,5 @@ perp-tracker sim stats
 ## License
 
 MIT
+
+<!-- updated: 2026-09-08 -->
